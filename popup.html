@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="bar">
+      <img class="mark" src="icons/icon32.png" alt="" width="20" height="20" />
+      <span class="wordmark">Timestamped</span>
+      <button id="refresh-btn" class="icon-btn" title="Re-check this page" aria-label="Re-check this page">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+          <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            d="M20 11a8 8 0 1 0-1.5 5M20 5v6h-6" />
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <!-- loading -->
+      <section id="loading" class="pad">
+        <div class="ticks" aria-hidden="true"><i></i><i></i><i></i></div>
+        <p class="muted">Reading the page&hellip;</p>
+      </section>
+
+      <!-- result -->
+      <section id="result" class="pad" hidden>
+        <p class="eyebrow">Published</p>
+        <p id="date-main" class="date">—</p>
+        <p id="date-relative" class="relative">—</p>
+
+        <div id="modified-row" class="modified" hidden>
+          <span class="mod-label">Last modified</span>
+          <span id="modified-date" class="mod-date">—</span>
+        </div>
+
+        <div class="meter">
+          <div id="confidence-pips" class="pips"></div>
+          <p id="confidence-text" class="confidence">—</p>
+        </div>
+
+        <dl class="detail">
+          <dt>Source</dt>
+          <dd id="source-label">—</dd>
+        </dl>
+
+        <details id="details" class="signals-box">
+          <summary id="details-toggle" aria-expanded="false">
+            All signals <span id="signal-count" class="count">—</span>
+          </summary>
+          <ul id="signals" class="signals"></ul>
+        </details>
+
+        <div class="actions">
+          <button id="copy-btn" class="ghost-btn" disabled>Copy</button>
+        </div>
+      </section>
+
+      <!-- empty / error -->
+      <section id="empty" class="pad" hidden>
+        <p class="eyebrow">No date</p>
+        <p id="empty-msg" class="empty-msg">Nothing found.</p>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
