@@ -8,10 +8,6 @@ patterns, and the Wayback Machine — and surfaces the last-modified date too.
 
 [Install](#installation) · [How it works](#how-it-works) · [Privacy](#privacy)
 
-<img src="docs/screenshot.png" width="320" alt="Timestamped popup showing a detected publish date, a last-modified line, a confidence meter, and an expandable list of signals" />
-
-</div>
-
 ---
 
 ## Why
